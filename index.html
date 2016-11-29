@@ -3,6 +3,7 @@
 <head>
   <title>Slick Playground</title>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="./slick/slick.css">
   <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css">
   <style type="text/css">
@@ -11,11 +12,18 @@
       padding: 0;
     }
 
+    /*@media screen and (max-width: 767px) {
+      .slider {
+        display: inline-block!important;
+      }
+    }*/
+
     * {
       box-sizing: border-box;
     }
 
     .slider {
+      /*display: none;*/
         width: 100%;
         margin: 100px auto;
     }
@@ -38,16 +46,17 @@
       padding: 0 40px 0 0!important;
     }
 
-    h1 {
+    h1, h4 {
       text-align: center;
     }
+
+
   </style>
 </head>
 <body>
 
-
   <h1>Pretty SLICK, bro</h1>
-
+  <h4>please view on a mobile device</h4>
   <section class="center slider">
     <div>
       <img src="images/Atlanta.jpg">
@@ -73,7 +82,7 @@
   <script type="text/javascript">
     $(document).on('ready', function() {
       $(".center").slick({
-        dots: true,
+        dots: false,
         infinite: true,
         centerMode: true,
         slidesToShow: 2,
